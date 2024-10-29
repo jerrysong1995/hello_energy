@@ -5,6 +5,25 @@ Spyder Editor
 This is a temporary script file.
 """
 import math
+import example2
+
+
+# def calc_pv_array_size(building_width, building_length, angle, pv_width, pv_height, pv_power):
+
+#     adjusted_roof_width = ((building_width))/math.cos(angle)
+#     # print(adjusted_roof_width)
+#     # print("\n")
+    
+#     num_panel = (building_length//pv_width)*(adjusted_roof_width//pv_height)
+#     # print(num_panel)
+#     # print("\n")
+    
+#     power_capacity = num_panel*pv_power
+#     power_capacity = power_capacity/1000
+#     # print(power_capacity)
+#     # print("\n")
+    
+#     return num_panel, power_capacity
 
 #Request for user input
 building_width = int(input("Enter building width in metres: "))
@@ -34,15 +53,19 @@ pv_power = int(input("Enter the PV power in Wp: "))
 print(pv_power)
 print("\n")
 
-adjusted_roof_width = ((building_width))/math.cos(angle)
-print(adjusted_roof_width)
-print("\n")
+num_panel, power_capacity = example2.calc_pv_array_size(building_width, building_length, angle, pv_width, pv_height, pv_power)
 
-num_panel = (building_length//pv_width)*(adjusted_roof_width//pv_height)
+    
+#calc_pv_array_size(num_panel, power_capacity) 
+# adjusted_roof_width = ((building_width))/math.cos(angle)
+# print(adjusted_roof_width)
+# print("\n")
+
+# num_panel = (building_length//pv_width)*(adjusted_roof_width//pv_height)
 print(num_panel)
 print("\n")
 
-power_capacity = num_panel*pv_power
-power_capacity = power_capacity/1000
+# power_capacity = num_panel*pv_power
+# power_capacity = power_capacity/1000
 print(power_capacity)
 print("\n")
